@@ -1,0 +1,18 @@
+SELECT @@VERSION;
+
+SELECT SUSER_SNAME();
+
+SELECT SYSDATETIME();
+
+SELECT @@SERVERNAME;
+
+SELECT name
+FROM sys.databases;
+
+SELECT name
+FROM sys.databases
+WHERE name='InternMSSQLTraining';
+
+USE InternMSSQLTraining;
+
+SELECT DB_NAME();

@@ -1,0 +1,12 @@
+ALTER TABLE employee
+ADD CONSTRAINT PK_Employee
+PRIMARY KEY(emp_id);
+
+ALTER TABLE employee
+ADD CONSTRAINT CK_Age
+CHECK(age>=18);
+
+ALTER TABLE employee
+ADD CONSTRAINT DF_City
+DEFAULT 'Pune'
+FOR City;

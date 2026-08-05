@@ -253,10 +253,10 @@ Included screenshots:
 # Repository Structure
 
 ```text
-Topic-1/
+assignments/
 │
 ├── README.md
-├── Topic1.sql
+├── Introduction_to_Databases.sql
 └── Screenshots/
     ├── object-explorer.png
     ├── employees-table.png

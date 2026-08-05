@@ -2,7 +2,7 @@ USE InternMSSQLTraining;
 GO
 
 -- 1. Server Name
-SELECT @@SERVERNAME AS Server Name;
+SELECT @@SERVERNAME AS ServerName;
 
 -- 2. Current Database
 SELECT DB_NAME() AS Current Database;

@@ -32,10 +32,8 @@ FROM hr.Employees
 WHERE Phone IS NULL;
 
 
+--Topic 4.2 - LIKE and TOP
 
-/*=========================================================
-    Topic 4.2 - LIKE and TOP
-=========================================================*/
 
 -- 1. Products containing 'License'
 
@@ -120,9 +118,30 @@ SELECT
     END AS PriceCategory
 FROM sales.Products;
 
+/*
+Select ProductID,ProductName,Category,UnitPrice,
+Case
+When Unitprice Between 500 and 25000 then 'Budget'
+When Unitprice Between 25000 and 50000 then 'Standard'
+Else 'Premium'
+End As 'ProductPrice'
+From sales.Products
+ORDER BY ProductPrice
+*/
+
 
 -- 4. Employee Experience
 
+Select EmployeeID,FirstName ,LastName,Email,Phone,HireDate,
+Case
+When Hiredate Between '2018-01-01' AND '2021-01-01' then 'Senior Based'
+When Hiredate Between '2021-01-01' AND '2023-01-01' then 'Experienced'
+Else 'New'
+END AS 'Level'
+From hr.Employees
+Order BY Level
+
+/*
 SELECT
     EmployeeID,
     FirstName,
@@ -132,4 +151,4 @@ SELECT
         WHEN HireDate >= DATEADD(YEAR,-8,GETDATE()) THEN 'Experienced'
         ELSE 'Senior'
     END AS ExperienceLevel
-FROM hr.Employees;
+FROM hr.Employees;*/
